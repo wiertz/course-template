@@ -1,5 +1,5 @@
 [project]
-name = "course builder"
+name = "course-builder"
 version = "0.1.0"
 description = "Build course website and materials"
 readme = "README.md"
