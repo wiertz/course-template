@@ -1,0 +1,9 @@
+# Deploy-Konfiguration mit Server-Koordinaten
+deploy.yaml
+
+# Build-Ausgabe
+_site/
+_tmp/
+
+# macOS
+.DS_Store

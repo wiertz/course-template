@@ -1,0 +1,10 @@
+title: "Erste Sitzung"
+date: 2026-01-01
+time: "10:00-12:00"
+description: "Kurzbeschreibung der Sitzung"
+
+materials:
+- group: "Lesetext"
+  items:
+  - title: "Titel des Texts"
+    url: "https://example.org/"

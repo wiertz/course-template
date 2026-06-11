@@ -1,0 +1,3 @@
+# Kopieren nach deploy.yaml und ausfüllen (deploy.yaml ist gitignored).
+deploy_base: /pfad/zum/kurs
+deploy_target: user@server:/var/www/pfad/zum/kurs

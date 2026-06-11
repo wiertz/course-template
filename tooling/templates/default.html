@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="$lang$" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+$for(author-meta)$
+  <meta name="author" content="$author-meta$">
+$endfor$
+  <title>$if(title)$$title$$else$$course.title$$endif$</title>
+  <link rel="stylesheet" href="$base$/assets/pico.blue.min.css">
+  <link rel="stylesheet" href="$base$/assets/custom.css">
+  <link rel="stylesheet" href="$base$/assets/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="$base$/assets/fontawesome/css/regular.min.css">
+  <link rel="stylesheet" href="$base$/assets/fontawesome/css/solid.min.css">
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+</head>
+
+<body>
+<header class="container">
+  <nav>
+    <ul>
+      $if(course.short)$
+      <li><strong>$course.short$</strong></li>
+      $endif$
+    </ul>
+    <ul>
+      <li><a href="$base$/index.html">Home</a></li>
+      <li><a href="$base$/sessions/index.html">Sitzungen</a></li>
+      <li><a href="$base$/assignments.html">Leistungen</a></li>
+      <li><a href="$base$/results.html">Ergebnisse</a></li>
+      <li><a href="$base$/literature.html">Literatur</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+<hgroup>
+  $if(title)$
+  <h1>$title$</h1>
+  $if(course.title)$
+  <p>$course.title$$if(course.semester)$ &ndash; $course.semester$$endif$</p>
+  $endif$
+  $elseif(course.title)$
+  <h1>$course.title$</h1>
+  $if(course.semester)$
+  <p>$course.semester$</p>
+  $endif$
+  $endif$
+</hgroup>
+
+$if(toc)$
+  <aside>
+    <nav id="TOC" role="doc-toc">
+    $table-of-contents$
+    </nav>
+  </aside>
+$endif$
+
+$body$
+
+$if(materials)$
+<div class="materials">
+<h2>Material</h2>
+<ul>
+$for(materials)$
+    $if(materials.group)$
+    <li>$materials.group$</li>
+    <ul>
+      $for(materials.items)$
+      <li><a href="$it.url$" target="_blank">$it.title$</a><br><i>$it.description$</i></li>
+      $endfor$
+    </ul>
+    $else$
+    <li><a href="$it.url$" target="_blank">$it.title$</a><br>$it.description$</li>
+    $endif$
+$endfor$
+</ul>
+</div>
+$endif$
+
+
+$if(listing)$
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Zeit</th>
+      <th>Titel</th>
+    </tr>
+  </thead>
+$for(listing)$
+    <tr>
+      <td>$listing.date$</td>
+      <td>$listing.time$</td>
+      <td><a href=$base$$listing.url$>$listing.title$</a></td>
+    </tr>    
+    $endfor$
+</table>
+$endif$
+
+$refs$
+
+</main>
+
+<footer class="container">
+  <small>
+    $if(course.title)$$course.title$$if(course.semester)$ – $course.semester$ $endif$$if(instructor)$ – <a href="$instructor.url$" target="_blank">$instructor.name$</a>$endif$$endif$
+  </small>
+</footer>
+
+</body>
+</html>

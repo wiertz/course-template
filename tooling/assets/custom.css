@@ -1,0 +1,94 @@
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+#refs {
+  color: var(--pico-muted-color);
+}
+
+#refs a {
+  color: var(--pico-muted-color);
+  text-decoration: underline;
+}
+
+.csl-bib-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.csl-entry {
+  margin-bottom: 0.75rem;
+}
+
+.materials, .task, .info, .goals {
+  padding: var(--pico-typography-spacing-vertical);
+  margin-bottom: 2em;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.info {
+  background-color: #e9edf7;
+  border-color: #D7D8EC;
+}
+
+.info > h2::before {
+  font: var(--fa-font-regular);
+  content: '\f0eb  ';
+}
+
+.goals {
+  background-color: #daede7;
+  border-color: #afdace;
+}
+
+.goals > h2::before {
+  font: var(--fa-font-regular);
+  content: '\f35a  ';
+}
+
+.task {
+  background-color: #fdf3fb;
+  border-color: #fbe7f8;
+}
+
+.task > h2::before {
+  font: var(--fa-font-regular);
+  content: '\f274  ';
+}
+
+.materials {
+  background-color: #faf8f1;
+  border-color: #f6f1e3;
+}
+
+.materials > h2::before {
+  font: var(--fa-font-regular);
+  content: '\f07c  ';
+}
+
+a {
+  color: #344A9A;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+  font-style: italic;
+}
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}

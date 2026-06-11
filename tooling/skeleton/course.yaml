@@ -1,0 +1,20 @@
+lang: de
+
+bibliography: literature.json
+
+course:
+  title: Kurstitel
+  short: KURS
+  semester: Semester JJJJ
+
+instructor:
+  name: Vorname Nachname
+  email: name@example.org
+  url: https://example.org/
+
+
+## Required for custom placing of reference list in template
+reference-section-title: Literatur
+refs: |
+  ::: {#refs}
+  :::
