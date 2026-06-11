@@ -1,7 +1,7 @@
 [project]
-name = "course"
+name = "course builder"
 version = "0.1.0"
-description = "Build tooling for the course website"
+description = "Build course website and materials"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
